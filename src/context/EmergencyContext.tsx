@@ -160,7 +160,7 @@ export const EmergencyProvider: React.FC<{ children: ReactNode }> = ({ children 
     severity?: SeverityLevel
   ) => {
     const newEvent: ActivityEvent = {
-      id: 'ACT-' + Date.now().toString().slice(-4),
+      id: 'ACT-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7),
       timestamp: getCurrentTimeString(),
       timeAgo: 'Just now',
       incidentId,
